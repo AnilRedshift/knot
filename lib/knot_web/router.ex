@@ -19,8 +19,9 @@ defmodule KnotWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", KnotWeb do
-  #   pipe_through :api
-  # end
+  forward "/api", Absinthe.Plug,
+    schema: Knot.Schema
+
+  forward "/graphiql", Absinthe.Plug.GraphiQL,
+    schema: Knot.Schema
 end
