@@ -1,11 +1,4 @@
-# Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     Knot.Repo.insert!(%Knot.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+alias Knot.{Repo,Comment}
+
+Repo.insert!(%Comment{author: "Ada", content: "I love you floof throwers"})
+Repo.insert!(%Comment{author: "Stacey", content: "Yayy!!!"})
