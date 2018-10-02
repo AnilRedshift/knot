@@ -51,8 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :knot, Knot.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "knot",
+  password: "ringbear",
   database: "knot_dev",
   hostname: "localhost",
   pool_size: 10
