@@ -1,25 +1,26 @@
 defmodule Knot.Schema do
 
   use Absinthe.Schema
+  import_types Knot.Schema.Types
 
-  # Example data
-  @items %{
-    "foo" => %{id: "foo", name: "Foo"},
-    "bar" => %{id: "bar", name: "Bar"}
-  }
+  @comments [
+    %{
+      author: "Ada",
+      body: "bearz"
+    },
+    %{
+      author: "Stacey",
+      body: "cats"
+    }
+  ]
 
   query do
-    field :item, :item do
-      arg :id, non_null(:id)
-      resolve fn %{id: item_id}, _ ->
-        {:ok, @items[item_id]}
+    @desc "Get a list of comments"
+    field :comments, list_of(:comment) do
+      resolve fn _, _ ->
+        {:ok, @comments}
       end
     end
   end
 
-  @desc "An item"
-  object :item do
-    field :id, :id
-    field :name, :string
-  end
 end
