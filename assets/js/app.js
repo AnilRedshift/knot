@@ -1,14 +1,14 @@
-import "phoenix_html"
-import React from "react"
-import ReactDOM from "react-dom"
+import 'phoenix_html';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Splash from './splash';
 
-class HelloWorld extends React.Component {
+class App extends Component {
   render() {
-    return (<h1>Hello World!</h1>)
+    return <Splash />;
   }
 }
-
 ReactDOM.render(
-  <HelloWorld/>,
+  <App />,
   document.getElementById("app")
 )

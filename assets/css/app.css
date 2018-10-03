@@ -1,1 +1,17 @@
 /* This file is for your main application css. */
+
+body {
+  margin: 0px;
+}
+#splash {
+  background-color: black;
+}
+
+#splash .row {
+    display: flex;
+}
+
+#splash .quad {
+    flex: 1 1 auto;
+    height: 50vh;
+}
