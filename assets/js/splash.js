@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RevealingPicture from './revealingPicture';
 
 class Splash extends Component {
   render() {
@@ -6,18 +7,18 @@ class Splash extends Component {
       <div id="splash">
         <div className="row">
           <div className="quad">
-            1 of 4
+            <RevealingPicture source="/images/1.jpg"/>
           </div>
           <div className="quad">
-            2 of 4
+            <RevealingPicture source="/images/2.jpg"/>
           </div>
         </div>
         <div className="row">
           <div className="quad">
-            3 of 4
+            <RevealingPicture source="/images/3.jpg"/>
           </div>
           <div className="quad">
-            4 of 4
+            <RevealingPicture source="/images/4.jpg"/>
           </div>
         </div>
       </div>
